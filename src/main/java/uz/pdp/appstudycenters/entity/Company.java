@@ -24,10 +24,10 @@ public class Company {
     private String description;
 
     @OneToMany
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "address_id")
     private List<Address> address;
 
     @OneToMany
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "contact_id")
     private List<Contact> contact;
 }

@@ -26,8 +26,9 @@ public class User {
     @ManyToOne
     private Address address;
     
-    @OneToOne
-    private Contact contact;
+    @OneToMany
+    @JoinColumn(name = "contact_id")
+    private List<Contact> contact;
 
     private Integer age;
 

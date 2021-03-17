@@ -24,7 +24,7 @@ public class ActiveCourse {
     private Course course;
 
     @OneToMany
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "teacher_id")
     private List<Teacher> teacher;
 
     private Date date;
