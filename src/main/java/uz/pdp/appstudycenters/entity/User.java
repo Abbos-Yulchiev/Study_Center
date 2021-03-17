@@ -27,7 +27,7 @@ public class User {
     private Address address;
     
     @OneToMany
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "contact_id")
     private List<Contact> contact;
 
     private Integer age;

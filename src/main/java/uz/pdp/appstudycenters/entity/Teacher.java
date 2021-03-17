@@ -27,12 +27,12 @@ public class Teacher {
     private Boolean gender;
 
     @ManyToOne
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "address_id")
     private Address address;
 
     private String specialist;
 
-    @OneToMany(mappedBy = "contact")
+    @OneToMany
     private List<Contact> contact;
 
 }
