@@ -33,5 +33,4 @@ public class Teacher {
 
     @OneToOne
     private Contact contact;
-
 }
