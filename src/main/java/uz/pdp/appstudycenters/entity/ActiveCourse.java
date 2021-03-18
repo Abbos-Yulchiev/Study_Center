@@ -23,9 +23,6 @@ public class ActiveCourse {
     @OneToOne
     private Course course;
 
-    @OneToMany
-    @JoinColumn(name = "teacher_id")
-    private List<Teacher> teacher;
 
     private Date date;
 

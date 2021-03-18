@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import uz.pdp.appstudycenters.entity.Address;
+import uz.pdp.appstudycenters.entity.Contact;
 import uz.pdp.appstudycenters.entity.User;
 import uz.pdp.appstudycenters.payload.Result;
 import uz.pdp.appstudycenters.payload.UserDTO;
@@ -74,6 +75,12 @@ public class UserService {
         Optional<Address> optionalAddress = addressRepository.findById(userDTO.getAddressId());
         if (!optionalAddress.isPresent())
             return new Result("Invalid Address id", false);
+
+        for (Contact contact : userDTO.getContact()) {
+            Integer userByPhoneNumber = userRepository.findUserByPhoneNumber(contact.getPhoneNumber());
+            if (userByPhoneNumber!=0)
+                return new Result("Phone number already used, Enter another one.", false);
+        }
 
         User user = optionalUser.get();
 
