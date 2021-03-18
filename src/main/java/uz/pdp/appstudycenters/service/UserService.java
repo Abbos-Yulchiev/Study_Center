@@ -1,6 +1,10 @@
 package uz.pdp.appstudycenters.service;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import uz.pdp.appstudycenters.entity.Address;
 import uz.pdp.appstudycenters.entity.User;
@@ -44,4 +48,51 @@ public class UserService {
         return new Result("New User successfully added.", true, user.getId());
 
     }
+
+    public Page<User> getUsers(Integer page){
+
+        Pageable pageable = PageRequest.of(page,15);
+        Page<User> userPage = userRepository.findAll(pageable);
+        return userPage;
+    }
+
+    public Result getUser(Integer userId){
+
+        Optional<User> optionalUser = userRepository.findById(userId);
+        if (!optionalUser.isPresent()){
+            return new Result("Invalid user id", false);
+        }
+        return new Result("User result" , true, optionalUser);
+    }
+
+    public Result editUser(Integer userId, UserDTO userDTO){
+
+        Optional<User> optionalUser = userRepository.findById(userId);
+        if (!optionalUser.isPresent())
+            return new Result("Invalid user Id", false);
+
+        Optional<Address> optionalAddress = addressRepository.findById(userDTO.getAddressId());
+        if (!optionalAddress.isPresent())
+            return new Result("Invalid Address id", false);
+
+        User user = optionalUser.get();
+
+        user.setFirstname(userDTO.getFirstname());
+        user.setLastname(userDTO.getLastname());
+        user.setAge(userDTO.getAge());
+        user.setAddress(optionalAddress.get());
+        user.setContact(user.getContact());
+        user.setGender(userDTO.getGender());
+        userRepository.save(user);
+        return new Result("User edited.", true, user.getId());
+    }
+    public Result deleteUser(@PathVariable Integer userId){
+
+        Optional<User> optionalUser = userRepository.findById(userId);
+        if (!optionalUser.isPresent())
+            return new Result("Invalid user Id", false);
+        userRepository.deleteById(userId);
+        return new Result("User deleted", true);
+    }
+
 }
