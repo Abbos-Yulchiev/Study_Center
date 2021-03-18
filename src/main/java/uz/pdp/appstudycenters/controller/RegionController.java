@@ -1,6 +1,7 @@
 package uz.pdp.appstudycenters.controller;
 
 
+import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 import uz.pdp.appstudycenters.entity.Region;
 import uz.pdp.appstudycenters.payload.Result;
@@ -19,11 +20,9 @@ public class RegionController {
     }
 
     @GetMapping(value = "/get")
-    public List<Region> getRegion() {
-
-        return regionService.getRegion();
+    public Page<Region> getRegion(@RequestParam("pages") Integer pages) {
+        return regionService.getRegion(pages);
     }
-
     @PostMapping(value = "/upload")
     public Result addRegion(@RequestBody Region region) {
 
@@ -38,7 +37,10 @@ public class RegionController {
 
     @DeleteMapping(value = "/delete/{regionId}")
     public Result deleteRegion(@PathVariable Integer regionId) {
-
         return regionService.deleteRegion(regionId);
+    }
+    @GetMapping(value = "/{regionId}")
+    public Result getRegionById(@PathVariable Integer regionId){
+    return regionService.getRegionById(regionId);
     }
 }

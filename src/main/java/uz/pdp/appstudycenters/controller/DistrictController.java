@@ -1,9 +1,42 @@
 package uz.pdp.appstudycenters.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import uz.pdp.appstudycenters.payload.DistrictDTO;
+import uz.pdp.appstudycenters.payload.Result;
+import uz.pdp.appstudycenters.service.DistrictService;
 
 @RestController
 @RequestMapping(value = "/district")
 public class DistrictController {
+
+    final DistrictService districtService;
+
+    public DistrictController(DistrictService districtService) {
+        this.districtService = districtService;
+    }
+    //  CREATE
+    @PostMapping
+    public Result addDistrict(@RequestBody DistrictDTO districtDTO){
+       return districtService.addDistrict(districtDTO);
+    }
+    //READ
+    @GetMapping
+    public Result getDistrict(@RequestParam("pages") Integer pages){
+return districtService.getDistrict(pages);
+    }
+    //UPDATE
+    @PutMapping(value = "/districtId")
+    public Result edit(@RequestBody DistrictDTO districtDTO,@PathVariable Integer districtId){
+       return districtService.editDistrict(districtId,districtDTO);
+    }
+    //DELETE
+    @DeleteMapping(value = "/{districtId}")
+    public Result delete(@PathVariable Integer districtId){
+return districtService.deleteDistrict(districtId);
+    }
+    //READ BY ID
+    @GetMapping(value = "/{districtId}")
+    public Result getById(@PathVariable Integer districtId){
+return districtService.getById(districtId);
+    }
 }

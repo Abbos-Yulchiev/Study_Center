@@ -1,5 +1,8 @@
 package uz.pdp.appstudycenters.service;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,8 +23,9 @@ public class RegionService {
         this.regionRepository = regionRepository;
     }
 
-    public List<Region> getRegion() {
-        return regionRepository.findAll();
+    public Page<Region> getRegion(Integer page) {
+        Pageable pageable= PageRequest.of(page,10);
+        return regionRepository.findAll(pageable);
     }
 
     public Result addRegion(@RequestBody Region region) {
@@ -67,9 +71,16 @@ public class RegionService {
         if (!optionalRegion.isPresent()) {
             return new Result("Region not found, Invalid Region Id", false);
         }
-
         regionRepository.deleteById(regionId);
         return new Result("Region Deleted", true, regionId);
+    }
+    //GET REGION BY ID
+    public Result  getRegionById(Integer regionId){
+        Optional<Region> optionalRegion = regionRepository.findById(regionId);
+        if (!optionalRegion.isPresent()){
+            return new Result("Region not found, Invalid Region Id", false);
+        }
+        return new Result("Region founded", true,regionRepository.findById(regionId));
     }
 }
 
