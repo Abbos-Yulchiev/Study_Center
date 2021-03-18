@@ -33,6 +33,7 @@ public class Teacher {
     private String specialist;
 
     @OneToMany
+    @JoinColumn(name = "contact_id")
     private List<Contact> contact;
 
 }

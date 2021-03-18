@@ -19,7 +19,7 @@ public class Application {
     @ManyToOne
     private ActiveCourse activeCourse;
 
-    private Boolean applicationStatus;
+    private Boolean applicationStatus = false;
 
     @OneToOne
     private User user;

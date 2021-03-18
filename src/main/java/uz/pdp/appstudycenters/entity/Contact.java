@@ -27,4 +27,6 @@ public class Contact {
     private String webPage;
 
     private String telegramAddress;
+
+
 }
