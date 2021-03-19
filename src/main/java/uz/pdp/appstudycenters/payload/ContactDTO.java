@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 public class ContactDTO {
     private String phoneNumber;
     private String email;
-    private String WebPage;
+    private String webPage;
     private String telegramAddress;
 }

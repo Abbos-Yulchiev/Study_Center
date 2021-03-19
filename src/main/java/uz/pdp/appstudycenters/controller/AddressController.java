@@ -24,12 +24,12 @@ public class AddressController {
 return addressService.getAddress(pages);
     }
     //UPDATE
-    @PutMapping(value = "/addressId")
+    @PostMapping(value = "/edit/{addressId}")
     public Result edit(@RequestBody AddressDTO addressDTO,@PathVariable Integer addressId){
 return addressService.editAddress(addressId,addressDTO);
     }
     //DELETE
-    @DeleteMapping(value = "/{addressId}")
+    @RequestMapping(value = "delete/{addressId}")
     public Result delete(@PathVariable Integer addressId){
 return addressService.deleteAddress(addressId);
     }
