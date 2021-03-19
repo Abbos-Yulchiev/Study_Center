@@ -22,6 +22,8 @@ public class RegionController {
     @GetMapping(value = "/get")
     public Page<Region> getRegion(@RequestParam("pages") Integer pages) {
         return regionService.getRegion(pages);
+
+
     }
     @PostMapping(value = "/upload")
     public Result addRegion(@RequestBody Region region) {
@@ -29,13 +31,13 @@ public class RegionController {
         return regionService.addRegion(region);
     }
 
-    @PutMapping(value = "/edit/{regionId}")
+    @PostMapping(value = "/edit/{regionId}")
     public Result editRegion(@PathVariable Integer regionId, @RequestBody Region region) {
 
         return regionService.editRegion(regionId, region);
     }
 
-    @DeleteMapping(value = "/delete/{regionId}")
+    @RequestMapping(value = "/delete/{regionId}")
     public Result deleteRegion(@PathVariable Integer regionId) {
         return regionService.deleteRegion(regionId);
     }
