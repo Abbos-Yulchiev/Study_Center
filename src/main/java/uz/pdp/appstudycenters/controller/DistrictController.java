@@ -25,17 +25,17 @@ public class DistrictController {
 return districtService.getDistrict(pages);
     }
     //UPDATE
-    @PutMapping(value = "/districtId")
+    @PostMapping(value = "edit/districtId")
     public Result edit(@RequestBody DistrictDTO districtDTO,@PathVariable Integer districtId){
        return districtService.editDistrict(districtId,districtDTO);
     }
     //DELETE
-    @DeleteMapping(value = "/{districtId}")
+    @GetMapping(value = "delete/{districtId}")
     public Result delete(@PathVariable Integer districtId){
 return districtService.deleteDistrict(districtId);
     }
     //READ BY ID
-    @GetMapping(value = "/{districtId}")
+    @GetMapping(value = "byId/{districtId}")
     public Result getById(@PathVariable Integer districtId){
 return districtService.getById(districtId);
     }

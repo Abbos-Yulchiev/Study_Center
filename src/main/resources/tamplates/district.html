@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background: #4e555b">
+<div class="container">
+    <!-- The Modal -->
+    <div class="col-md-3">
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add District</h4>
+<!--                        MODALNI YOPISH UCHUN-->
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        Name<input id="nameDistrict" class="input-group">
+                        Code<input id="codeDistrict" class="input-group">
+<!--                        Tumanni aydisini yuborish uchun-->
+                        Tumanni tanlang<br>
+                        <select name="region" id="regionId" size="1">
+                            <option  value="0">---</option>
+
+                        </select>
+
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveDistrict">Save changes</button>
+                        <button type="button" class="btn btn-danger"  data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="modal" id="myModal2">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Edit District</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        Name<input id="nameDistrict2" class="input-group">
+                        Code<input id="codeDistrict2" class="input-group">
+                      <!--  Tumanni aydisini yuborish uchun-->
+                        Tumanni tanlang<br>
+                        <select name="region" id="regionId2" size="1">
+                            <option  value="0">---</option>
+                        </select>
+
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveDistrict2">Save Edit</button>
+                        <button type="button" class="btn btn-danger"  data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Bosh Menyu -->
+    <div class="col-md-3">
+        <div class="modal" id="myModal1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Delete District</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <h4>This will object  delete </h4>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="deleteDist">Yes delete</button>
+                        <button type="button" class="btn btn-danger"  data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header row" >
+            <h4 style="margin-left: 200px">Add District</h4>
+            <button id="addDistrict" style="margin-left: 500px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                Add District
+            </button>
+        </div>
+        <div class="card-body">
+            <table  width="400" align="center" style="text-align: center" id="district"  border="2" >
+                <tr>
+                    <th >id</th><th>Name<th>Code</th><th>Region</th><th>Edit</th><th>Delete</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="js/jQuery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
