@@ -22,4 +22,5 @@ public class Address {
     private District district;
 
     private String code;
+
 }
