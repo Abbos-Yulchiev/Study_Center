@@ -41,6 +41,24 @@ public class MainService {
         return courses;
     }
 
+    public List<Course> searchForDistrictAndName(String name, String district) {
+        Optional<List<Course>> optionalCourseList = courseRepository.findAllByNameAndDistrict(name, district);
+        if (!optionalCourseList.isPresent()){
+            return new ArrayList<>();
+        }
+        List<Course> courses = optionalCourseList.get();
+        return courses;
+    }
+
+    public List<Course> searchByDistrict(String district) {
+        Optional<List<Course>> optionalCourseList = courseRepository.findAllCourseByDistrict(district);
+        if (!optionalCourseList.isPresent()){
+            return new ArrayList<>();
+        }
+        List<Course> courses = optionalCourseList.get();
+        return courses;
+    }
+
 //    public List<Course> searchForegionAndName(String name, String region) {
 //
 //    }

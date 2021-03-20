@@ -28,6 +28,18 @@ public class MainController {
         return courseList;
     }
 
+    @GetMapping("/byCourseNameAndDistrictName")
+    public List<Course> searchForDistrictAndName(@RequestParam("name") String name, @RequestParam("district") String district){
+        List<Course> courseList = mainService.searchForDistrictAndName(name, district);
+        return courseList;
+    }
+
+    @GetMapping("/byDistrict")
+    public List<Course> searchForDistrict(@RequestParam("district") String district){
+        List<Course> courseList = mainService.searchByDistrict(district);
+        return courseList;
+    }
+
 
 
 }
