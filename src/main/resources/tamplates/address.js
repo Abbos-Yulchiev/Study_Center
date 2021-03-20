@@ -14,7 +14,7 @@ $(document).ready(function(){
     $("#saveAddress").click(function(){
         var name= $("#streetNameAddress").val();
         var code=  $("#codeAddress").val();
-        var districtId=$("#addressId").val();
+        var districtId=$("#tuman").val();
         var address_data={
             "streetName": name,
             "districtId" : parseInt(districtId),
