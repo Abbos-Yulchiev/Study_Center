@@ -26,12 +26,12 @@ return contactService.addContact(contactDTO);
 return contactService.getContact(pages);
     }
     //UPDATE
-    @PutMapping(value = "/contactId")
+    @PostMapping(value = "/{contactId}")
     public Result editContact(@RequestBody ContactDTO contactDTO,@PathVariable Integer contactId ){
 return  contactService.editContact(contactId,contactDTO);
     }
     //DELETE
-    @DeleteMapping(value = "/{contactId}")
+    @RequestMapping(value = "delete/{contactId}")
     public Result deleteContact(@PathVariable Integer contactId){
 return contactService.deleteContact(contactId);
     }

@@ -11,5 +11,5 @@ public class AddressDTO {
 
     private String  streetName;
     private Integer districtId;
-    private String  Code;
+    private String  code;
 }

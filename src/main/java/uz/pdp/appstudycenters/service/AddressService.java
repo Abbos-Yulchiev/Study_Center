@@ -29,7 +29,7 @@ public class AddressService {
             return new Result("Address Already Saved",false);
         }
         Address address=new Address();
-        address.setCode(addressDTO.getStreetName());
+        address.setStreetName(addressDTO.getStreetName());
         address.setCode(addressDTO.getCode());
         Optional<District> optionalDistrict = districtRepository.findById(addressDTO.getDistrictId());
         if (!optionalDistrict.isPresent()){
@@ -51,7 +51,7 @@ address.setDistrict(optionalDistrict.get());
             return  new Result("Address Not Found ",false);
         }
         Address address= optionalAddress.get();
-        address.setCode(addressDTO.getStreetName());
+        address.setStreetName(addressDTO.getStreetName());
         address.setCode(addressDTO.getCode());
         Optional<District> optionalDistrict = districtRepository.findById(addressDTO.getDistrictId());
         if (!optionalDistrict.isPresent()){
