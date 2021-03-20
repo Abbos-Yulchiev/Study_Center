@@ -2,6 +2,7 @@ package uz.pdp.appstudycenters.controller;
 
 import org.springframework.web.bind.annotation.*;
 import uz.pdp.appstudycenters.entity.Course;
+import uz.pdp.appstudycenters.payload.Result;
 import uz.pdp.appstudycenters.service.MainService;
 
 import java.util.List;
@@ -39,6 +40,17 @@ public class MainController {
         List<Course> courseList = mainService.searchByDistrict(district);
         return courseList;
     }
+    //COMPANIYA NOMINI BERIB COURSNI TOPISH
+    @GetMapping("/byCompany")
+       public Result searchForCompanyCours(@RequestParam("name") String companyName){
+      return mainService.searchCourseByCompanyName(companyName);
+    }
+    //COURS CATEGORIYASI NOMINI BERIB BARCHA COUSRLARNI TOPISH
+    @GetMapping("/byCategoryName")
+    public Result searchForCategoryName(@RequestParam("name") String name){
+      return   mainService.searchCourseByCategoryName(name);
+    }
+
 
 
 

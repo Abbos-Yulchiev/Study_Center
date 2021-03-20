@@ -3,6 +3,7 @@ package uz.pdp.appstudycenters.service;
 import org.springframework.stereotype.Service;
 import uz.pdp.appstudycenters.entity.ActiveCourse;
 import uz.pdp.appstudycenters.entity.Course;
+import uz.pdp.appstudycenters.payload.Result;
 import uz.pdp.appstudycenters.repository.ActiveCourseRepository;
 import uz.pdp.appstudycenters.repository.CourseRepository;
 
@@ -59,7 +60,12 @@ public class MainService {
         return courses;
     }
 
-//    public List<Course> searchForegionAndName(String name, String region) {
-//
-//    }
+    public Result searchCourseByCompanyName(String companyName){
+        List<Course> courseByCompany = courseRepository.getCourseByCompany(companyName);
+        return new Result("Siz kiritgan companiyadagi Kurslar",true,courseByCompany);
+    }
+    public Result searchCourseByCategoryName(String categoryName){
+        List<Course> courseByCategoryName = courseRepository.getCourseByCategoryName(categoryName);
+        return new Result("Siz izlagan categoriya Bo'yicha Cousrlar",true,courseByCategoryName);
+    }
 }

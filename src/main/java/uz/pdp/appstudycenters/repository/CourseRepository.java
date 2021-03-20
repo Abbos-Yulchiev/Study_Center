@@ -1,5 +1,6 @@
 package uz.pdp.appstudycenters.repository;
 
+import org.springframework.data.domain.Page;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -7,8 +8,10 @@ import uz.pdp.appstudycenters.entity.Course;
 
 import java.util.List;
 import java.util.Optional;
-
-
+@Query(value = "select * from course join company c on c.id = course.company_id where c.name=:companyName",nativeQuery = true)
+   List<Course> getCourseByCompany(String companyName );
+@Query(value = "select * from course join course_category cc on course.id = cc.course_id where cc.name=:categoryName",nativeQuery = true)
+List<Course> getCourseByCategoryName(String categoryName);
 public interface CourseRepository extends JpaRepository<Course, Integer> {
 
     Optional<List<Course>> findAllByName(String name);
