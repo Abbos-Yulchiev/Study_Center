@@ -1,6 +1,7 @@
 package uz.pdp.appstudycenters.controller;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 import uz.pdp.appstudycenters.entity.ActiveCourse;
@@ -12,7 +13,7 @@ import uz.pdp.appstudycenters.service.ActiveCourseService;
 @RequestMapping(value = "/activeCourse")
 public class ActiveCourseController {
     
-    
+
     final ActiveCourseService activeCourseService;
 
     public ActiveCourseController(ActiveCourseService activeCourseService) {

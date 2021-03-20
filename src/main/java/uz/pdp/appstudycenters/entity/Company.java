@@ -23,11 +23,11 @@ public class Company {
 
     private String description;
 
-    @OneToMany
+    @OneToOne
     @JoinColumn(name = "address_id")
-    private List<Address> address;
+    private Address address;
 
-    @OneToMany
+    @OneToOne
     @JoinColumn(name = "contact_id")
-    private List<Contact> contact;
+    private Contact contact;
 }

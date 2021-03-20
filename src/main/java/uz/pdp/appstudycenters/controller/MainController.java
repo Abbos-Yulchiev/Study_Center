@@ -16,17 +16,17 @@ public class MainController {
         this.mainService = mainService;
     }
 
-    @GetMapping
+    @GetMapping("/byCourseName")
     public List<Course> searchActiveCourse(@RequestParam("name") String name){
         List<Course> courseList = mainService.search(name);
         return courseList;
     }
 
-//    @GetMapping
-//    public List<Course> searchForegionAndName(@RequestParam("name") String name, @RequestParam("region") String region){
-////        List<Course> courseList = mainService.searchForegionAndName(name, region);
-//        return courseList;
-//    }
+    @GetMapping("/byCourseNameAndRegionName")
+    public List<Course> searchForRegionAndName(@RequestParam("name") String name, @RequestParam("region") String region){
+        List<Course> courseList = mainService.searchForRegionAndName(name, region);
+        return courseList;
+    }
 
 
 

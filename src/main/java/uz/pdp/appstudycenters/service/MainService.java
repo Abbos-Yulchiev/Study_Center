@@ -33,6 +33,15 @@ public class MainService {
         return courseList;
     }
 
+    public List<Course> searchForRegionAndName(String name, String region) {
+        Optional<List<Course>> optionalCourseList = courseRepository.findAllByNameAndRegion(name, region);
+        if (!optionalCourseList.isPresent()){
+            return new ArrayList<>();
+        }
+        List<Course> courses = optionalCourseList.get();
+        return courses;
+    }
+
 //    public List<Course> searchForegionAndName(String name, String region) {
 //
 //    }
