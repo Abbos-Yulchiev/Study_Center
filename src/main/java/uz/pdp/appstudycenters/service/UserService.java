@@ -39,12 +39,12 @@ public class UserService {
 
         User user = new User();
 
-        user.setFirstname(user.getFirstname());
-        user.setLastname(user.getLastname());
+        user.setFirstname(userDTO.getFirstname());
+        user.setLastname(userDTO.getLastname());
         user.setGender(userDTO.getGender());
         user.setAddress(optionalAddress.get());
-        user.setAge(user.getAge());
-        user.setContact(user.getContact());
+        user.setAge(userDTO.getAge());
+        user.setContact(userDTO.getContact());
         userRepository.save(user);
         return new Result("New User successfully added.", true, user.getId());
 
@@ -88,7 +88,7 @@ public class UserService {
         user.setLastname(userDTO.getLastname());
         user.setAge(userDTO.getAge());
         user.setAddress(optionalAddress.get());
-        user.setContact(user.getContact());
+        user.setContact(userDTO.getContact());
         user.setGender(userDTO.getGender());
         userRepository.save(user);
         return new Result("User edited.", true, user.getId());
