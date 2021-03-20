@@ -8,10 +8,10 @@ import java.util.List;
 @Data
 public class UserDTO {
 
-    private String firstname;
-    private String lastname;
-    private Integer addressId;
-    private List<Contact> contact;
-    private Integer age;
-    private Boolean gender;
+    private String   firstname;
+    private String   lastname;
+    private Integer  age;
+    private Boolean  gender;
+    private Integer  addressId;
+    private Integer  contactId;
 }
