@@ -74,7 +74,7 @@ $(document).ready(function(){
     $.getJSON("http://localhost:8080/address?pages=0",function(result){
         $.each(result.object.content,function (i ,data) {
             var tuma= "<option  value = '"+data.id+"' > "+ data.streetName +" "+data.code+"</option>"
-            $("#tumanA").append(tuma)
+            $("#tuman").append(tuma)
         })
     })
 
