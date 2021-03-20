@@ -9,6 +9,35 @@
 </head>
 <body style="background: #4e555b">
 <div class="container">
+
+    <!--Body -->
+    <div class="card">
+        <div class="card-header row" >
+            <h4 style="margin-left: 100px">Register User</h4>
+            <button id="addDistrict" style="margin-left: 600px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                Add User
+            </button>
+            <button id="" style="margin-left:650px;margin-top: -40px" type="button" class="btn btn-primary" >
+                <a href="district.html" style="color: lightblue">Go To District</a>
+            </button>
+            <button id="goDistrict" style="margin-left:450px;margin-top: -40px" type="button" class="btn btn-primary" >
+                <a href="index.html" style="color: lightblue">Go To Region </a>
+            </button>
+            <button  style="margin-left:980px;margin-top: -40px" type="button" class="btn btn-primary" >
+                <a href="contact.html" style="color: lightblue">Go Contact </a>
+            </button>
+            <button  style="margin-left:300px;margin-top: -40px" type="button" class="btn btn-primary" >
+                <a href="address.html" style="color: lightblue">Go Address </a>
+            </button>
+        </div>
+        <div class="card-body">
+            <table  width="900" align="center" style="text-align: center" id="address"  border="2" >
+                <tr>
+                    <th >id</th><th>FirstName</th><th>Last Name</th><th>Phone Number</th><th>Street Name<th>Code</th><th>District</th><th>Region</th><th>Edit</th><th>Delete</th>
+                </tr>
+            </table>
+        </div>
+    </div>
     <!-- The Modal -->
     <div class="col-md-3">
         <div class="modal" id="myModal">
@@ -16,24 +45,26 @@
                 <div class="modal-content">
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <h4 class="modal-title">Add Address</h4>
+                        <h4 class="modal-title">Add User</h4>
                         <!--                        MODALNI YOPISH UCHUN-->
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <!-- Modal body -->
                     <div class="modal-body">
-                        Name<input id="streetNameAddress" class="input-group">
-                        Code<input id="codeAddress" class="input-group">
-                        <!--                        Tumanni aydisini yuborish uchun-->
-                        Tumanni tanlang<br>
-                        <select name="tuman" id="tuman" size="1">
+                        First Name<input id="firsrName" class="input-group">
+                        Last name<input id="lastName" class="input-group">
+                        Phone Number<input id="PhoneNumber" class="input-group">
+                        <!--                        Address aydisini yuborish uchun-->
+                        Addressni tanlang<br>
+                        <select name="address" id="addressId" size="1">
                             <option  value="0">---</option>
+                            <option  value="5">Oqtepa</option>
                         </select>
 
                     </div>
                     <!-- Modal footer -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveAddress">Save changes</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveUser">Save User</button>
                         <button type="button" class="btn btn-danger"  data-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -51,12 +82,14 @@
                     </div>
                     <!-- Modal body -->
                     <div class="modal-body">
-                        Name<input id="streetAddress2" class="input-group">
-                        Code<input id="codeAddress2" class="input-group">
-                        <!--  Tumanni aydisini yuborish uchun-->
-                        Tumanni tanlang<br>
-                        <select name="address" id="addressId2" size="1">
+                        First Name<input id="firsrName2" class="input-group">
+                        Last name<input id="lastName2" class="input-group">
+                        Phone Number<input id="PhoneNumber2" class="input-group">
+                        <!--                        Address aydisini yuborish uchun-->
+                        Addressni tanlang<br>
+                        <select name="address2" id="addressId2" size="1">
                             <option  value="0">---</option>
+                            <option  value="5">Oqtepa</option>
 
                         </select>
 
@@ -71,14 +104,15 @@
         </div>
     </div>
 
-    <!--Bosh Menyu -->
+
+    <!--Modla SELETE -->
     <div class="col-md-3">
         <div class="modal" id="myModal1">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <h4 class="modal-title">Delete Address</h4>
+                        <h4 class="modal-title">Delete User</h4>
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <!-- Modal body -->
@@ -87,7 +121,7 @@
                     </div>
                     <!-- Modal footer -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="deleteAddress">Yes delete</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="deleteUser">Yes delete</button>
                         <button type="button" class="btn btn-danger"  data-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -95,30 +129,7 @@
         </div>
     </div>
 
-    <div class="card">
-        <div class="card-header row" >
-            <h4 style="margin-left: 200px">Add Address</h4>
-            <button id="addDistrict" style="margin-left: 500px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-                Add Address
-            </button>
-            <button id="" style="margin-left:650px;margin-top: -40px" type="button" class="btn btn-primary" >
-                <a href="district.html" style="color: lightblue">Go To District</a>
-            </button>
-            <button id="goDistrict" style="margin-left:450px;margin-top: -40px" type="button" class="btn btn-primary" >
-                <a href="index.html" style="color: lightblue">Go To Region </a>
-            </button>
-            <button  style="margin-left:980px;margin-top: -40px" type="button" class="btn btn-primary" >
-                <a href="contact.html" style="color: lightblue">Go Contact </a>
-            </button>
-        </div>
-        <div class="card-body">
-            <table  width="400" align="center" style="text-align: center" id="address"  border="2" >
-                <tr>
-                    <th >id</th><th>Street Name<th>Code</th><th>District</th><th>Region</th><th>Edit</th><th>Delete</th>
-                </tr>
-            </table>
-        </div>
-    </div>
+
 </div>
 <script src="js/jQuery.min.js"></script>
 <script src="js/popper.js"></script>

@@ -11,17 +11,19 @@ $(document).ready(function(){
 
 
     //CREATE
-    $("#saveAddress").click(function(){
-        var name= $("#streetNameAddress").val();
-        var code=  $("#codeAddress").val();
-        var districtId=$("#addressId").val();
-        var address_data={
-            "streetName": name,
-            "districtId" : parseInt(districtId),
-            "code" : parseInt(code),
+    $("#saveUser").click(function(){
+        var firstName= $("#firstName").val();
+        var lastName=  $("#lastName").val();
+        var phoneNumber=$("#phoneNumber").val();
+        var addressId=$("#addressId").val();
+        var user_data={
+            "firstName": firstName,
+            "lastName" : lastName,
+            "phoneNumber" : phoneNumber,
+            "addressId" : parseInt(addressId),
         }
-        $.ajax('http://localhost:8080/address' ,{
-            data       : JSON.stringify(address_data),
+        $.ajax('http://localhost:8080/user/upload' ,{
+            data       : JSON.stringify(user_data),
             contentType: 'application/json',
             type       : 'POST',
             dataType   : 'json'
@@ -49,11 +51,10 @@ $(document).ready(function(){
         });
     });
 
-     $.getJSON("http://localhost:8080/district?pages=0",function(result){
+    $.getJSON("http://localhost:8080/address/get?pages=0",function(result){
         $.each(result.object.content,function (i ,data) {
-            var tum= "<option  value = '"+data.id+"' > "+data.name+"</option>"
-            $("#tuman").append(tum)
-
+            var address= "<option  value = '"+data.id+"' > "+data.name+"</option>"
+            $("#addressIdId").append(address)
         })
     })
 
@@ -77,7 +78,6 @@ function  editAddress(id)
         $.each(result.object.content,function (i ,data) {
             var address= "<option  value = '"+data.id+"' > "+data.name+"</option>"
             $("#addressId2").append(address)
-
         })
     })
     addressIdEdit=id;
