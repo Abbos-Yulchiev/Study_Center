@@ -36,6 +36,8 @@ public class UserService {
         if (!optionalAddress.isPresent()) {
             return new Result("Invalid Address id", false);
         }
+        //O'ZGARTIRILDI
+        Optional<Contact> optionalContact = contactRepository.findById(userDTO.getContactId());
 
         User user = new User();
 
@@ -44,7 +46,7 @@ public class UserService {
         user.setGender(userDTO.getGender());
         user.setAddress(optionalAddress.get());
         user.setAge(userDTO.getAge());
-        user.setContact(userDTO.getContact());
+        user.setContact(optionalContact.get());
         userRepository.save(user);
         return new Result("New User successfully added.", true, user.getId());
 
@@ -75,12 +77,7 @@ public class UserService {
         Optional<Address> optionalAddress = addressRepository.findById(userDTO.getAddressId());
         if (!optionalAddress.isPresent())
             return new Result("Invalid Address id", false);
-
-        for (Contact contact : userDTO.getContact()) {
-            Integer userByPhoneNumber = userRepository.findUserByPhoneNumber(contact.getPhoneNumber());
-            if (userByPhoneNumber!=0)
-                return new Result("Phone number already used, Enter another one.", false);
-        }
+        Optional<Contact> optionalContact = contactRepository.findById(userDTO.getContactId());
 
         User user = optionalUser.get();
 
@@ -88,7 +85,8 @@ public class UserService {
         user.setLastname(userDTO.getLastname());
         user.setAge(userDTO.getAge());
         user.setAddress(optionalAddress.get());
-        user.setContact(userDTO.getContact());
+        //o'zgartirildi
+        user.setContact(optionalContact.get());
         user.setGender(userDTO.getGender());
         userRepository.save(user);
         return new Result("User edited.", true, user.getId());

@@ -11,7 +11,7 @@
 <div class="container">
 
     <!--Body -->
-    <div class="card">
+    <div class="card" style="width: 130%;margin-left: -100px" >
         <div class="card-header row" >
             <h4 style="margin-left: 100px">Register User</h4>
             <button id="addDistrict" style="margin-left: 600px" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
@@ -30,10 +30,10 @@
                 <a href="address.html" style="color: lightblue">Go Address </a>
             </button>
         </div>
-        <div class="card-body">
-            <table  width="900" align="center" style="text-align: center" id="address"  border="2" >
+        <div class="card-body " style="width: 100%">
+            <table  width="100%" align="center" style="text-align: center" id="usersData"  border="2" >
                 <tr>
-                    <th >id</th><th>FirstName</th><th>Last Name</th><th>Phone Number</th><th>Street Name<th>Code</th><th>District</th><th>Region</th><th>Edit</th><th>Delete</th>
+                    <th >id</th><th>FirstName</th><th>Last Name</th><th>age</th><th>Gender</th><th>Phone Number</th><th>Email</th><th>Web Page</th><th>Telegram</th><th>Street Name<th>Code</th><th>District</th><th>Region</th><th>Edit</th><th>Delete</th>
                 </tr>
             </table>
         </div>
@@ -51,20 +51,26 @@
                     </div>
                     <!-- Modal body -->
                     <div class="modal-body">
-                        First Name<input id="firsrName" class="input-group">
-                        Last name<input id="lastName" class="input-group">
-                        Phone Number<input id="PhoneNumber" class="input-group">
+                        First Name  <input id="firstName"   class="input-group">
+                        Last name   <input id="lastName"    class="input-group">
+                        Age         <input id="age"         class="input-group">
+                        <input type="radio"   name="gender" value="true">Erkak<br>
+                        <input type="radio"   name="gender" value="false">Ayol<br>
                         <!--                        Address aydisini yuborish uchun-->
-                        Addressni tanlang<br>
-                        <select name="address" id="addressId" size="1">
+                        Addressni tanlang : Contactni tanlang<br>
+                        <select name="address" id="tumanA" size="1">
                             <option  value="0">---</option>
-                            <option  value="5">Oqtepa</option>
+
                         </select>
 
+                        <select name="contact" style="margin-left: 60px" id="contactId" size="1">
+                            <option  value="0">---</option>
+                            <option  value="3">+9989967398253</option>
+                        </select>
                     </div>
                     <!-- Modal footer -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveUser">Save User</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveUser">Save Users</button>
                         <button type="button" class="btn btn-danger"  data-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -82,17 +88,22 @@
                     </div>
                     <!-- Modal body -->
                     <div class="modal-body">
-                        First Name<input id="firsrName2" class="input-group">
-                        Last name<input id="lastName2" class="input-group">
-                        Phone Number<input id="PhoneNumber2" class="input-group">
+                        First Name  <input id="firstName2"   class="input-group">
+                        Last name   <input id="lastName2"    class="input-group">
+                        Age         <input id="age2"         class="input-group">
+                        <input type="radio"   name="gender2" value="true">Erkak<br>
+                        <input type="radio"   name="gender2" value="false">Ayol<br>
                         <!--                        Address aydisini yuborish uchun-->
-                        Addressni tanlang<br>
-                        <select name="address2" id="addressId2" size="1">
+                        Addressni tanlang : Contactni tanlang<br>
+                        <select name="address" id="tumanA2" size="1">
                             <option  value="0">---</option>
-                            <option  value="5">Oqtepa</option>
 
                         </select>
 
+                        <select name="contact" style="margin-left: 60px" id="contactId2" size="1">
+                            <option  value="0">---</option>
+                            <option  value="3">+9989967398253</option>
+                        </select>
                     </div>
                     <!-- Modal footer -->
                     <div class="modal-footer">
@@ -134,7 +145,7 @@
 <script src="js/jQuery.min.js"></script>
 <script src="js/popper.js"></script>
 <script src="js/bootstrap.js"></script>
-<script src="address.js"></script>
+<script src="userRegister.js"></script>
 
 </body>
 </html>
