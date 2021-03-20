@@ -17,7 +17,6 @@ public class MainService {
     final ActiveCourseRepository activeCourseRepository;
     final CourseRepository courseRepository;
 
-
     public MainService(ActiveCourseRepository activeCourseRepository, CourseRepository courseRepository) {
         this.activeCourseRepository = activeCourseRepository;
         this.courseRepository = courseRepository;
