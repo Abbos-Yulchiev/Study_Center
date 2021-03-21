@@ -5,7 +5,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import uz.pdp.appstudycenters.entity.Company;
 import uz.pdp.appstudycenters.payload.Result;
 import uz.pdp.appstudycenters.repository.CompanyRepository;
@@ -13,7 +12,8 @@ import uz.pdp.appstudycenters.repository.CompanyRepository;
 import java.util.Optional;
 
 @Service
-public class CompanyService {
+public class
+CompanyService {
 
     final CompanyRepository companyRepository;
 
@@ -21,7 +21,7 @@ public class CompanyService {
         this.companyRepository = companyRepository;
     }
 
-    public Result addNewCompany(@RequestBody Company company) {
+    public Result addNewCompany(Company company) {
 
         boolean existsByName = companyRepository.existsByName(company.getName());
         if (existsByName)
@@ -43,7 +43,7 @@ public class CompanyService {
         return companyRepository.findAll(pageable);
     }
 
-    public Result getCompany(@PathVariable Integer companyId){
+    public Result getCompany(Integer companyId) {
 
         Optional<Company> optionalCompany = companyRepository.findById(companyId);
         if (!optionalCompany.isPresent())
@@ -52,11 +52,11 @@ public class CompanyService {
         return new Result("Company:", true, optionalCompany);
     }
 
-    public Result editCompany(@PathVariable Integer companyId, @RequestBody Company company){
+    public Result editCompany(Integer companyId, Company company) {
 
         Optional<Company> optionalCompany = companyRepository.findById(companyId);
         if (!optionalCompany.isPresent())
-            return new Result("Invalid company id",false);
+            return new Result("Invalid company id", false);
 
         boolean existsByName = companyRepository.existsByName(company.getName());
         if (existsByName)
@@ -71,7 +71,7 @@ public class CompanyService {
         return new Result("Company successfully edited;", true, editedCompany.getId());
     }
 
-    public Result deleteCompany(@PathVariable Integer companyId){
+    public Result deleteCompany(Integer companyId) {
 
         Optional<Company> optionalCompany = companyRepository.findById(companyId);
         if (!optionalCompany.isPresent())

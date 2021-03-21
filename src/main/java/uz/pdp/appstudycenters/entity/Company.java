@@ -24,10 +24,8 @@ public class Company {
     private String description;
 
     @OneToOne
-    @JoinColumn(name = "address_id")
     private Address address;
 
     @OneToOne
-    @JoinColumn(name = "contact_id")
     private Contact contact;
 }
