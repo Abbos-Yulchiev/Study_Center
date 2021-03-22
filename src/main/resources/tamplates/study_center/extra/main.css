@@ -1,0 +1,310 @@
+.wrapper{
+   background-color: #8a6edf;
+   margin: 0 auto;
+   width: 60%; 
+  position: absolute;
+  margin-left: 17%;
+}
+.block{border: 1px solid #cecece;
+    display: inline-block;
+    position: absolute;
+    width: 97%;
+    position: relative;
+    left: 1.5%;
+    margin-top: 15px;
+    right: 5%;
+    bottom: 5%;
+    height: 800px;
+    background-color: #ffffff;
+    margin-bottom: 5%;
+    box-shadow: 1px 50px 50px   #392f50;
+    border-radius: 7px;
+}
+.box{float: left;
+  display: inline-block;
+
+    margin-left: 50px;
+    margin-top: 15px;
+    margin-right: 10px;
+    width: 44%;
+    height: 550px;
+    background-color:#f8f8f8 ;
+    position: relative;
+    border: 1px solid silver;
+}
+.box1{
+    float: left;
+    display: block;
+    margin-left: 30px;
+    margin-right: 20px;
+    width: 45%;
+    height: 350px;
+    margin-top: -30px;
+    background-color:#f8f8f8 ;
+    border: 1px solid silver;
+
+}
+
+.rasm{
+    position: relative;
+    top: -70px;
+    right: -125px;
+}
+.rasm:hover{
+    cursor: no-drop;
+}
+  
+
+.block h3{
+    color: rgb(138, 110, 223);
+    padding-top: 30px;
+    font-size: 30px;
+    padding-left: 150px ;
+    font-family: sans-serif;
+}
+.shop1{margin: 0;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    top: -80px;
+    font-size: 20px;
+    font-family: sans-serif;
+    left: -150px;
+    color: #cecece;
+}
+.shop1:hover{
+    cursor: no-drop;
+    text-decoration: underline;
+}
+.shop3:hover{
+    cursor: no-drop;
+    text-decoration: underline;
+}
+.shop2:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    
+}
+.shop2{margin: 0;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    top: -80px;
+    font-size: 20px;
+    font-family: sans-serif;
+    left: -120px;
+    color: #9575f4;
+}
+.shop3{margin: 0;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    top: -80px;
+    font-size: 20px;
+    font-family: sans-serif;
+    left: -90px;
+    color: #cecece;
+}
+    .box :nth-child(1){
+       font-size: 25px;
+       color: #757577;
+    }
+    .box :nth-child(2){
+        position: relative;
+        color:#cecece;
+        top: -10px;
+        left: 45px;
+    }
+    .box :nth-child(3){
+        position: relative;
+        color:#cecece;
+        left: 39%;
+        margin-bottom: 20px;
+        top: -10px; 
+    }
+    .box :nth-child(5){
+        background-color: #ffffff;
+        height: 45px;
+        width: 37%;
+        border:1px solid silver;
+        border-radius: 3px;
+        position: relative;
+        margin-left: 40px;
+    }
+    .box :nth-child(6){
+        margin-left: 25px;
+        background-color: #ffffff;
+        height: 45px;
+        width: 37%;
+        border:1px solid silver;
+     border-radius: 3px;
+    }
+    .box :nth-child(8){
+        position: relative;
+        color:#cecece;
+        margin-left: 40px;
+      top: 10px;
+    }
+    .box :nth-child(10){
+        background-color: #ffffff;
+        width: 81%;
+        height: 45px;
+        border:1px solid silver;
+        border-radius: 3px;
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+   
+    .box :nth-child(12){
+    color: #cecece;
+    position: relative;
+    left: 45px;
+    top: 10px;
+    }
+    
+    .box :nth-child(14){
+        background-color: #ffffff;
+        width: 81%;
+        height: 45px;
+        border:1px solid silver;
+     border-radius: 3px;
+     margin-top: 20px;
+     margin-left: 40px;
+    }
+    
+    .box :nth-child(16){
+        color:#cecece;
+        position: relative;
+        left: 45px;
+        top: 10px;
+    }
+    .box :nth-child(17){
+        color: #cecece;
+        position: relative;
+        left: 48%;
+        position: relative;
+        top: 10px;
+        
+    }
+    
+    .box :nth-child(19){
+        background-color: #ffffff;
+        width: 37%;
+        height: 45px;
+        border:1px solid silver;
+     border-radius: 3px;
+     margin-left: 40px;
+     margin-top: 20px;
+    }
+    .box :nth-child(20){
+        position: relative;
+        left: 27px;
+        background-color: #ffffff;
+        width: 37%;
+        height: 45px;
+        border:1px solid silver;
+     border-radius: 3px;
+    } 
+    
+    .box :nth-child(22){
+        color:#cecece;  
+         position: relative;
+         left: 45px;
+         top: 10px;
+    } 
+    .box :nth-child(24){
+     background-color: #ffffff;
+     width: 82%;
+     height: 45px;
+     border:1px solid silver;
+     border-radius: 3px;
+     margin-left: 40px;
+     margin-top: 20px;
+     border-left: 50px solid #cecece;
+     box-sizing: border-box;
+    } 
+    
+    
+    .box1 :nth-child(1){
+      color: #757577;
+    font-size: 25px;
+    font-family: sans-serif;
+      text-align: center;
+
+    }
+    .box1 :nth-child(2){color: #cecece;
+    margin-left: 40px;
+   position: relative;
+   top: -10px;
+    }
+    .box1 :nth-child(4){
+       
+         background-color: #ffffff;
+        width: 200px;
+        height: 150px;
+        margin-left: 30px;
+        border-radius: 3px;
+        border: 1px solid silver;
+       text-align: center;
+       font-size: 25px;
+       color: #cecece;
+        }
+    .box1 :nth-child(5){ 
+        background-color:#9575f4;
+        width: 200px;
+        height: 150px;
+        margin-top: -154px;
+        margin-left: 270px;
+        border-radius: 3px;
+        border: 1px solid silver;
+        text-align: center;
+        font-size: 25px;
+       color: #cecece;
+    }
+    .b1  h1 {font-family: sans-serif;
+        font-size: 50px;
+        color: #9575f4;
+        position: relative;
+top: 30px;}
+        
+    .but{
+        width: 45%;
+        height: 100px;
+        margin-left: 25px;
+        background-color:#9575f4;
+        border: 2px solid #cecece;
+        border-radius: 5px;
+        font-size: 25px;
+        color: #ffffff;
+        font-family: sans-serif;
+    }
+.inpot input:nth-child(1){border: 1px solid ;
+margin-left: 25px;
+padding: 10px;
+margin-top: 30px;
+margin-bottom: 10px;}
+.inpot input:nth-child(1){border: 1px solid ;
+    margin-left: 25px;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+    
+}.inpot input:nth-child(3){border: 1px solid ;
+    margin-left: 25px;
+    padding: 10px;
+    margin-bottom: 30px;
+    color: #cecece;
+   
+    }
+  .rg{
+      color: red;
+  }
+    .box1 :nth-child(5){}
+    .box1 :nth-child(6){}
+    .box1 :nth-child(7){}
+    .box1 :nth-child(8){}
+    .box1 :nth-child(9){}
+    .box1 :nth-child(10){}
+    
+   

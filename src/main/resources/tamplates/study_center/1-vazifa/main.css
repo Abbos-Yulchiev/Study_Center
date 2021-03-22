@@ -1,0 +1,320 @@
+.wrapper{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10%;
+    background-color: rgb(231, 240, 231);
+    padding: 5%;
+    
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+.block{
+    width: 50px;
+    height: 50px;  
+    position: absolute; 
+    top: 50px;
+    left: 50px;
+     
+}
+.block img{
+    width: 100%;
+}
+
+ .box:hover .block img{
+    display: none;
+    
+}
+.box{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 25px;
+    position: relative;
+    
+   
+    
+    
+}
+.box span{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 25px ;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    
+    
+}
+.box img{
+    width: 100%;
+}
+.box:hover .block{display: none;}
+
+   .box:hover span:nth-child(4)
+   {
+       width: 55px;
+       height: 55px;
+       border-radius: 25px;
+       position: absolute;
+       top: 47px;
+        left: 47px;
+    background-color: rgb(6, 32, 148);
+    transition:  0.1s ;
+    
+    
+   }
+   .box:hover span:nth-child(3){
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 25px 25px 25px;
+    top: 0px;
+    left: 0px;
+ background-color: rgb(6, 32, 148);
+ transition: 0.2s all 0s ease-in;
+ 
+ }
+ 
+ .box:hover span:nth-child(2){
+    width: 100%;
+    height: 100%;
+    border-radius: 150px 30px 150px 30px;
+    
+    top: 0px;
+    left: 0px;
+ background-color: white;
+ transition:  0.1s;
+ 
+ 
+}
+.box:hover span:nth-child(1){
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 25px 25px 25px;
+    
+    top: 0px;
+    left: 0px;
+ background-color: rgb(6, 32, 148);
+ transition:  0.01s;
+}
+.box:hover{
+    cursor: pointer;
+}
+.box1{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 25px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+.box1 span{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 25px ;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+.box1 img{
+    width: 100%;
+}
+.box1:hover .block{display: none;}
+.box1:hover span:nth-child(3)
+   {
+       width: 55px;
+       height: 55px;
+       border-radius: 25px;
+       position: absolute;
+       top: 47px;
+        left: 47px;
+        background-color: rgb(9, 167, 240);
+        transition: all 0.1s ease-in-out;
+   }
+   .box1:hover span:nth-child(2){
+    width: 100%;
+    height: 100%;
+    border-radius: 50px 150px 50px 150px;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(9, 167, 240);
+    transition: all 0.05s linear;
+}
+ .box1:hover span:nth-child(1){
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 25px 25px 25px;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(9, 167, 240);
+    transition: all 0.1s ease-in-out;
+}
+.box1:hover{
+    cursor: pointer;
+}
+.box2{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 25px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+.box2 span{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 25px ;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+.box2 img{
+    width: 100%;
+}
+.box2:hover .block{display: none;}
+.box2:hover span:nth-child(3)
+   {
+       width: 55px;
+       height: 55px;
+       border-radius: 25px;
+       position: absolute;
+       top: 47px;
+        left: 47px;
+        background-color: rgb(230, 32, 81);
+        transition: all 0.1s ease-in-out;
+   }
+   .box2:hover span:nth-child(2){
+    width: 100%;
+    height: 100%;
+    border-radius: 50px 150px 50px 150px;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(230, 32, 81);
+    transition: all 0.05s linear;
+}
+ .box2:hover span:nth-child(1){
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 25px 25px 25px;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(230, 32, 81);
+    transition: all 0.1s ease-in-out;
+}
+.box2:hover{
+    cursor: pointer;
+}
+.box3{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 25px;
+    position: relative;
+    transition: all 0.2s ease-in-out; 
+}
+.box3 span{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 25px ;
+    position: absolute;
+    top: 50px;
+    left: 50px;  
+}
+.box3 img{
+    width: 100%;
+}
+.box3:hover .block{display: none;}
+.box3:hover span:nth-child(3)
+   {
+       width: 55px;
+       height: 55px;
+       border-radius: 25px;
+       position: absolute;
+       top: 47px;
+        left: 47px;
+        background-color: rgb(201, 21, 15);
+        transition: all 0.1s ease-in-out;
+   }
+   .box3:hover span:nth-child(2){
+    width: 100%;
+    height: 100%;
+    border-radius: 50px 150px 50px 150px;
+    top: 0px;
+    left: 0px;
+    background-color: rgb(201, 21, 15);
+    transition: all 0.05s linear;
+    }
+ .box3:hover span:nth-child(1){
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 25px 25px 25px;
+    top: 0px;
+    left: 0px;
+ background-color: rgb(201, 21, 15);
+ transition: all 0.1s ease-in-out;
+}
+.box3:hover{
+    cursor: pointer;
+}
+.box4{
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 25px;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+    }
+.box4 span{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 25px ;
+    position: absolute;
+    top: 50px;
+    left: 50px; 
+}
+.box4 img{
+    width: 100%;
+}
+.box4:hover .block{display: none;}
+.box4:hover span:nth-child(3)
+   {
+       width: 55px;
+       height: 55px;
+       border-radius: 25px;
+       position: absolute;
+       top: 47px;
+        left: 47px;
+    background-color: rgb(32, 167, 230);
+    transition: all 0.1s ease-in-out;
+   }
+   .box4:hover span:nth-child(2){
+    width: 100%;
+    height: 100%;
+    border-radius: 50px 150px 50px 150px;
+    top: 0px;
+    left: 0px;
+ background-color: rgb(32, 167, 230);
+ transition: all 0.05s linear;
+ transition-timing-function:ease-in-out;
+ animation-direction: alternate;
+}
+ .box4:hover span:nth-child(1){
+    width: 100%;
+    height: 100%;
+    border-radius: 25px 25px 25px 25px;
+    top: 0px;
+    left: 0px;
+ background-color: rgb(32, 167, 230);
+ transition: all 0.1s ease-in-out;
+}
+.box4:hover{
+    cursor: pointer;
+}
+   

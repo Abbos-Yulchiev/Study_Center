@@ -1,0 +1,43 @@
+body{background:#f2f6f9;}
+
+.bg{background-color:#f2f6f9;}
+.navbar{background-color: #1ed6ce;}
+.silji{margin-left: 2rem;}
+.user{position: absolute;
+    top: -70px;left: 39%;border-radius: 50%; border: 10px solid #eef2f5;}
+.vectorleft{position: absolute;
+    top: 40%; left: -30px;width: 60px; height: 60px; background-color: silver;
+    border-radius: 50%;}
+.vectorleft img {position: absolute;
+            top: 25%;left: 25%;}
+.vectorright{position: absolute;
+ top: 40%; right: -30px;width: 60px; height: 60px; background-color: silver;
+ border-radius: 50%;}
+.vectorright img {position: absolute;
+            top: 25%;left: 35%;}
+.iconleft{position: absolute;
+  top: -20px; left: 50px;  }
+
+.iconright{position: absolute;
+  bottom: -20px; right: 50px;  }
+.card{width: 700px; height: 350px;padding-top: 100px;
+  padding-left: 50px;padding-right: 50px;}
+.slider{margin-top: 85px;margin-left: 200px;padding-bottom: 200px; 
+}
+.col-md-10{width: 48%;
+  height: 250px;
+  position: absolute;
+  top: 34%; right: 26.3%;}
+.carousel-indicators{position: absolute;
+  top: 500px;color: #1dd1a1;
+}
+.carousel-indicators li{border: solid 2px #1dd1a1;}       
+.col-md-8 h3{color: #1dd1a1;}
+.carousel-control-prev{position: absolute;
+                        left: 18%;top: 16%;}
+.carousel-control-next{position: absolute;
+                        left: 66.5%;top: 16%;}
+.carousel-inner{height: 460px;}
+.hovero:hover{cursor: pointer;
+              background-color:rgb(137, 243, 183);}
+              
