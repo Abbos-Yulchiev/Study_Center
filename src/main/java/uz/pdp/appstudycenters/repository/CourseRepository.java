@@ -30,8 +30,14 @@ public interface CourseRepository extends JpaRepository<Course, Integer> {
     @Query(value = "select * from course join course_category cc on course.id = cc.course_id where cc.name=:categoryName", nativeQuery = true)
     List<Course> getCourseByCategoryName(String categoryName);
 
-    @Query(value = "Select cr.name, cr.description from course cr join company c on cr.company_id = c.id join address a on c.address_id = a.id join district d on a.district_id = d.id join region r on d.region_id = r.id where r.name =:region", nativeQuery = true)
-    Optional<List<Course>> getCourseByRegionName(String region);
+    @Query(value = "Select *\n" +
+            "from course cr\n" +
+            "         join company c on cr.company_id = c.id\n" +
+            "         join address a on c.address_id = a.id\n" +
+            "         join district d on a.district_id = d.id\n" +
+            "         join region r on d.region_id = r.id\n" +
+            "where r.name =:name", nativeQuery = true)
+    Optional<List<Course>> getCourseByRegionName(String name);
 
     @Query(value = "select cc.name, cr.description, cy.name, cy.address_id from course_category cc join course cr on cr.id = cc.course_id where cc.name =:name", nativeQuery = true)
     Optional<List<Course>> getCourseByCourseCategoryName(String name);

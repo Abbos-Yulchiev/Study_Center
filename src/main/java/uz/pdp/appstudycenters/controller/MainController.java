@@ -60,9 +60,9 @@ public class MainController {
 
     //Region nomi bo'yicha Barcha kurslarni qidirish
     @GetMapping("/byRegion")
-    public List<Course> searchByRegionName(@RequestParam("region") String region) {
+    public List<Course> searchByRegionName(@RequestParam("region") String name) {
 
-        return mainService.searchByRegionName(region);
+        return mainService.searchByRegionName(name );
     }
 
     //Sub_Category bo'yicha qidirish
